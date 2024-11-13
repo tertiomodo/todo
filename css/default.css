@@ -1,13 +1,19 @@
 .body {
   min-width: 320px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   background-color: var(--white);
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 1024px;
   margin: 0 auto;
-  padding: 50px 0;
+  padding: 50px 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    padding: 50px;
+  }
 }
 
 .flex {
@@ -37,10 +43,10 @@
 
 .button {
   width: 100%;
-  max-width: 150px;
+  max-width: 80px;
   height: 50px;
   padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 20px;
   font-weight: 600;
   color: #e9e9ff;
@@ -50,10 +56,7 @@
   border-bottom: 2px solid #9090c3;
   border-left: 2px solid #bebef3;
   border-radius: 13px;
-  transition:
-  color 0.2s ease-in-out,
-  background-color 0.2s ease-in-out,
-  border 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border 0.2s ease-in-out;
 }
 
 .button:disabled {
@@ -82,7 +85,7 @@
 .item {
   min-height: 50px;
   margin-bottom: 10px;
-  padding: 5px;
+  padding: 5px 15px;
   border: 1px solid var(--silver-light);
   border-radius: 8px;
 }
@@ -93,6 +96,7 @@
 
 .checkbox {
   margin-right: 10px;
+  cursor: pointer;
 }
 
 .done {
@@ -105,6 +109,13 @@
   font-size: 18px;
 }
 
-.del {
+.cross {
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  background-image: url("../assets/img/cross.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
   cursor: pointer;
 }
